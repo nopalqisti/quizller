@@ -1,0 +1,16 @@
+# Database
+database/quizller.db
+
+# Logs
+/tmp/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
