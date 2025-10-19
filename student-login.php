@@ -7,14 +7,13 @@ $error = '';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $student_id = sanitize($_POST['student_id']);
     $password = sanitize($_POST['password']);
-    $hashed_password = hashPassword($password);
     
     $conn = getDBConnection();
-    $stmt = $conn->prepare("SELECT * FROM students WHERE student_id = ? AND password = ?");
-    $stmt->execute([$student_id, $hashed_password]);
+    $stmt = $conn->prepare("SELECT * FROM students WHERE student_id = ?");
+    $stmt->execute([$student_id]);
     $student = $stmt->fetch(PDO::FETCH_ASSOC);
     
-    if ($student) {
+    if ($student && verifyPassword($password, $student['password'])) {
         $_SESSION['student_id'] = $student['id'];
         $_SESSION['student_name'] = $student['name'];
         $_SESSION['student_class_id'] = $student['class_id'];

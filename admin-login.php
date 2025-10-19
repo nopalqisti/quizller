@@ -7,14 +7,13 @@ $error = '';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = sanitize($_POST['username']);
     $password = sanitize($_POST['password']);
-    $hashed_password = hashPassword($password);
     
     $conn = getDBConnection();
-    $stmt = $conn->prepare("SELECT * FROM admins WHERE username = ? AND password = ?");
-    $stmt->execute([$username, $hashed_password]);
+    $stmt = $conn->prepare("SELECT * FROM admins WHERE username = ?");
+    $stmt->execute([$username]);
     $admin = $stmt->fetch(PDO::FETCH_ASSOC);
     
-    if ($admin) {
+    if ($admin && verifyPassword($password, $admin['password'])) {
         $_SESSION['admin_id'] = $admin['id'];
         $_SESSION['admin_username'] = $admin['username'];
         header("Location: admin/dashboard.php");
