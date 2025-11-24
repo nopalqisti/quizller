@@ -58,11 +58,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <input type="password" name="password" required>
                     </div>
                     
-                    <button type="submit" class="btn btn-secondary">Login</button>
+                    <button type="submit" class="btn">Login</button>
                 </form>
                 
                 <p class="text-center mt-3">
-                    <small>Gunakan ID: S001-S020<br>Password: student123</small>
+                    <small>Masukkan ID dan Password</small>
                 </p>
             </div>
         </div>

@@ -1,3 +1,10 @@
+/*
+=========================================
+QUIZLLER - ORIGINAL FLAT THEME (NO GRADIENTS)
+Based on Original Repository Design
+=========================================
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -6,30 +13,38 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* HAPUS GRADASI ORIGINAL: background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+    /* GANTI DENGAN WARNA SOLID (Mengambil warna dominan ungu kebiruan) */
+    background-color: #667eea;
     min-height: 100vh;
+    color: #333;
 }
 
+/* --- Container & Layout --- */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
+/* --- Navbar --- */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.15); /* Sedikit lebih transparan agar menyatu dengan background solid */
     backdrop-filter: blur(10px);
     padding: 15px 30px;
-    border-radius: 10px;
+    border-radius: 12px;
     margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .navbar h1 {
     color: white;
     font-size: 28px;
+    font-weight: 700;
+    margin: 0;
 }
 
 .navbar a {
@@ -37,26 +52,29 @@ body {
     text-decoration: none;
     padding: 10px 20px;
     background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
+    border-radius: 8px;
     transition: all 0.3s;
+    font-weight: 600;
 }
 
 .navbar a:hover {
     background-color: rgba(255, 255, 255, 0.3);
 }
 
+/* --- Login/Register Forms --- */
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 80vh;
+    padding: 20px 0;
 }
 
 .login-box {
     background-color: white;
     padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 450px;
 }
@@ -64,9 +82,11 @@ body {
 .login-box h2 {
     text-align: center;
     margin-bottom: 30px;
-    color: #667eea;
+    color: #667eea; /* Warna ungu utama */
+    font-weight: 700;
 }
 
+/* --- Forms General --- */
 .form-group {
     margin-bottom: 20px;
 }
@@ -74,8 +94,8 @@ body {
 .form-group label {
     display: block;
     margin-bottom: 8px;
-    color: #333;
-    font-weight: 500;
+    color: #555;
+    font-weight: 600;
 }
 
 .form-group input,
@@ -84,7 +104,7 @@ body {
     width: 100%;
     padding: 12px 15px;
     border: 2px solid #e1e1e1;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 16px;
     transition: border-color 0.3s;
 }
@@ -96,291 +116,303 @@ body {
     border-color: #667eea;
 }
 
+/* --- Buttons (HAPUS SEMUA GRADASI) --- */
 .btn {
     width: 100%;
     padding: 12px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* HAPUS: background: linear-gradient(...) */
+    background-color: #667eea; /* Warna Primary Solid */
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: all 0.2s;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
 }
 
 .btn:hover {
     transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    background-color: #5a6fd6; /* Sedikit lebih gelap saat hover */
 }
 
+/* Button Variants - Solid Colors */
 .btn-secondary {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    /* HAPUS GRADASI PINK/ORANGE */
+    background-color: #f5576c; /* Warna Pink/Merah Solid */
 }
+.btn-secondary:hover { background-color: #e04a5e; box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4); }
 
 .btn-success {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    /* HAPUS GRADASI BIRU MUDA/CYAN */
+    background-color: #00c6fb; /* Warna Cyan Solid */
 }
+.btn-success:hover { background-color: #00b3e3; box-shadow: 0 5px 15px rgba(0, 198, 251, 0.4); }
 
 .btn-danger {
-    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    /* HAPUS GRADASI MERAH/KUNING */
+    background-color: #ff5e57; /* Warna Merah Solid */
 }
+.btn-danger:hover { background-color: #e84a44; box-shadow: 0 5px 15px rgba(255, 94, 87, 0.4); }
 
 .btn-small {
     width: auto;
-    padding: 8px 15px;
+    padding: 8px 16px;
     font-size: 14px;
 }
 
+/* --- Alerts --- */
 .alert {
-    padding: 12px 20px;
-    border-radius: 8px;
+    padding: 15px 20px;
+    border-radius: 10px;
     margin-bottom: 20px;
+    font-weight: 500;
 }
 
-.alert-success {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-}
+.alert-success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.alert-danger { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+.alert-info { background-color: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
 
-.alert-danger {
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-}
-
-.alert-info {
-    background-color: #d1ecf1;
-    color: #0c5460;
-    border: 1px solid #bee5eb;
-}
-
+/* --- Cards --- */
 .card {
     background-color: white;
-    padding: 25px;
-    border-radius: 12px;
+    padding: 30px;
+    border-radius: 16px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .card h3 {
     color: #667eea;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* --- Tables --- */
+.table-responsive {
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
 .table {
     width: 100%;
     border-collapse: collapse;
     background-color: white;
-    border-radius: 10px;
     overflow: hidden;
 }
 
 .table th,
 .table td {
-    padding: 12px 15px;
+    padding: 15px 20px;
     text-align: left;
+    border-bottom: 1px solid #eee;
 }
 
 .table th {
-    background-color: #667eea;
+    background-color: #667eea; /* Header tabel solid */
     color: white;
     font-weight: 600;
-}
-
-.table tr:nth-child(even) {
-    background-color: #f8f9fa;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
 }
 
 .table tr:hover {
-    background-color: #e9ecef;
+    background-color: #f8f9fa;
 }
 
+/* --- Dashboard Widgets --- */
 .dashboard-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
     margin-bottom: 30px;
 }
 
 .dashboard-card {
     background: white;
-    padding: 25px;
-    border-radius: 12px;
+    padding: 30px;
+    border-radius: 16px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
 }
 
 .dashboard-card h3 {
     color: #667eea;
-    font-size: 36px;
+    font-size: 42px;
     margin-bottom: 10px;
+    font-weight: 800;
 }
 
 .dashboard-card p {
-    color: #666;
-    font-size: 18px;
+    color: #777;
+    font-size: 16px;
+    margin: 0;
+    font-weight: 500;
 }
 
-.role-selection {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    padding: 40px;
+/* --- DASHBOARD ICON STYLES (Fixed) --- */
+
+/* 1. Card Layout */
+.dashboard-card {
+    display: flex;
+    align-items: center; /* Vertically center icon and text */
+    padding: 25px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Soft shadow */
+    border: 1px solid #f3f4f6;
+    transition: transform 0.2s;
 }
 
-.role-card {
-    background: white;
-    padding: 40px 30px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-    cursor: pointer;
+.dashboard-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.role-card:hover {
-    transform: translateY(-10px);
+/* 2. The Colored Square Container for Icons */
+.icon-box {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px; /* Space between icon and text */
+    flex-shrink: 0; /* Prevent squishing */
 }
 
-.role-card h3 {
-    color: #667eea;
-    margin-bottom: 15px;
-    font-size: 24px;
+/* 3. The SVG Icon itself */
+.icon-box svg {
+    width: 32px;
+    height: 32px;
+    stroke-width: 2; /* Make lines thicker */
 }
 
-.role-card p {
-    color: #666;
-    margin-bottom: 20px;
+/* 4. Color Variants (Background + Icon Color) */
+/* Teacher - Green */
+.icon-box-green {
+    background-color: #dcfce7; /* Light Green BG */
+    color: #16a34a;            /* Dark Green Icon */
 }
 
-.text-center {
-    text-align: center;
+/* Student - Blue/Grey (Like reference) */
+.icon-box-purple {
+    background-color: #f3f4f6; /* Light Grey/Blue BG */
+    color: #6b7280;            /* Dark Grey Icon */
 }
 
-.mt-3 {
-    margin-top: 20px;
+/* Quiz - Yellow/Orange */
+.icon-box-yellow {
+    background-color: #fef3c7; /* Light Yellow BG */
+    color: #d97706;            /* Dark Orange Icon */
 }
 
+/* Kelas - Blue */
+.icon-box-blue {
+    background-color: #dbeafe; /* Light Blue BG */
+    color: #2563eb;            /* Dark Blue Icon */
+}
+
+/* 5. Typography for Numbers */
+.dashboard-info h3 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #667eea; /* Use your primary purple color */
+    margin: 0;
+    line-height: 1.1;
+}
+
+.dashboard-info p {
+    margin: 5px 0 0 0;
+    color: #6b7280;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* --- Quiz Taking UI --- */
 .quiz-question {
     background: white;
     padding: 30px;
-    border-radius: 12px;
-    margin-bottom: 20px;
+    border-radius: 16px;
+    margin-bottom: 25px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .quiz-question h4 {
     color: #333;
     margin-bottom: 20px;
+    font-size: 18px;
 }
 
 .quiz-option {
     display: block;
-    padding: 15px;
-    margin-bottom: 10px;
+    padding: 15px 20px;
+    margin-bottom: 12px;
     background-color: #f8f9fa;
-    border: 2px solid #e1e1e1;
-    border-radius: 8px;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.2s;
+    font-weight: 500;
 }
 
 .quiz-option:hover {
-    background-color: #e9ecef;
+    background-color: #eef2ff;
     border-color: #667eea;
 }
 
 .quiz-option input[type="radio"] {
-    margin-right: 10px;
+    margin-right: 12px;
 }
 
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-    background-color: white;
-    margin: 10% auto;
-    padding: 30px;
-    border-radius: 12px;
-    width: 80%;
-    max-width: 600px;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover {
-    color: #000;
-}
-
+/* --- Badges --- */
 .badge {
     display: inline-block;
-    padding: 5px 12px;
-    border-radius: 20px;
+    padding: 6px 12px;
+    border-radius: 50px;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.badge-pending {
-    background-color: #ffc107;
-    color: #000;
-}
+.badge-pending { background-color: #ffeeba; color: #856404; }
+.badge-running { background-color: #c3e6cb; color: #155724; }
+.badge-completed { background-color: #e2e3e5; color: #383d41; }
 
-.badge-running {
-    background-color: #28a745;
-    color: white;
-}
-
-.badge-completed {
-    background-color: #6c757d;
-    color: white;
-}
+/* --- Utilities & Others --- */
+.text-center { text-align: center; }
+.mt-3 { margin-top: 20px; }
+.link-text { color: #667eea; text-decoration: none; font-weight: 600; }
+.link-text:hover { text-decoration: underline; }
 
 .stats-container {
     background: white;
     padding: 30px;
-    border-radius: 12px;
-    margin-bottom: 20px;
+    border-radius: 16px;
+    margin-bottom: 30px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .answer-review {
     background: white;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    border-left: 4px solid #ddd;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border-left: 5px solid #ddd;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
-
-.answer-review.correct {
-    border-left-color: #28a745;
-    background-color: #d4edda;
-}
-
-.answer-review.wrong {
-    border-left-color: #dc3545;
-    background-color: #f8d7da;
-}
-
-.link-text {
-    color: #667eea;
-    text-decoration: none;
-}
-
-.link-text:hover {
-    text-decoration: underline;
-}
+.answer-review.correct { border-left-color: #28a745; background-color: #f4fff7; }
+.answer-review.wrong { border-left-color: #dc3545; background-color: #fff5f5; }

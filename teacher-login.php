@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <input type="password" name="password" required>
                     </div>
                     
-                    <button type="submit" class="btn btn-success">Login</button>
+                    <button type="submit" class="btn">Login</button>
                 </form>
                 
                 <p class="text-center mt-3">
@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </p>
                 
                 <p class="text-center mt-3">
-                    <small>Contoh: budi@teacher.com / teacher123</small>
+                    <small>Masukkan Email dan Password jika sudah Daftar</small>
                 </p>
             </div>
         </div>

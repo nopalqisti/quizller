@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </form>
                 
                 <p class="text-center mt-3">
-                    <small>Gunakan username: opal, ardi, fina, atau rifki<br>Password: admin123</small>
+                    <small>Masukkan Username dan Password</small>
                 </p>
             </div>
         </div>
